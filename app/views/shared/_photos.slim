@@ -1,0 +1,23 @@
+.row-fluid
+ul.thumbnails
+  - photos.each do |photo|
+    li.span4
+      .thumbnail
+        img style="width: 200px; height: 200px;" src=photo.path
+        .caption
+          h3= photo.title
+          p= photo.summary
+          p
+            | Published: #{photo.published}
+          h3
+            | Comments: #{photo.comments_count}
+          ul
+            - photo.comments.each do |comment|
+              li
+                p
+                  |Author: #{comment.title}
+                p
+                  |Text: #{comment.content}
+          h4
+            | Create new comment
+          = render "shared/comment_form", photo: photo

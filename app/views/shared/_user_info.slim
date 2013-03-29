@@ -1,0 +1,16 @@
+.user_info
+  table class="table table-striped"
+    thead
+      tr
+        th
+        th
+    tbody
+      tr
+        td First Name:
+        td= current_user.info.first_name
+      tr
+        td Last Name:
+        td= current_user.info.last_name
+      tr
+        td E-mail:
+        td= current_user.info.email

@@ -1,0 +1,5 @@
+= form_for "picasa_comment", url: "/albums/#{photo.album_id}/create_comment" do |f|
+  = f.hidden_field :photo_id, {value: photo.id}
+  = f.text_area :content, {rows: 3}
+  br
+  = f.submit "Create", {class: "btn btn-success"}

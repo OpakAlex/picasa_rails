@@ -1,0 +1,4 @@
+- if current_user
+  = render "shared/nav_bar", albums: @albums, photos: nil
+- else
+  = render "shared/google_login"

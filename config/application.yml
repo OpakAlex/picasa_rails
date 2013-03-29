@@ -1,0 +1,7 @@
+development:
+  GOOGLE_KEY: "433797089051.apps.googleusercontent.com"
+  GOOGLE_SECRET: "Qtz-MerKN2ec2ddb7idj88uZ"
+
+test:
+  GOOGLE_KEY: "433797089051.apps.googleusercontent.com"
+  GOOGLE_SECRET: "Qtz-MerKN2ec2ddb7idj88uZ"

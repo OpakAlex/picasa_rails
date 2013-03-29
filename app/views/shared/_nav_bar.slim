@@ -1,0 +1,21 @@
+- if current_user
+  - css_album_class = photos ? "" : "active"
+  - name_album = photos ? "Album" : "Albums"
+  .nav_content
+    .tabbable.tabs
+      ul.nav.nav-tabs
+        li id="user_info_tab"
+          a data-toggle="tab" href="#user_info" User Info
+          li class=css_album_class id="album_nav"
+            a data-toggle="tab" href="#albums_panel"= name_album
+        - if photos
+          li class="active" id="photos_nav"
+            a data-toggle="tab" href="#photos_panel" Photos
+    .tab-content
+      .tab-pane id="user_info"
+        = render "shared/user_info"
+      .tab-pane class=css_album_class id="albums_panel"
+        = render "shared/albums", albums: albums
+      - if photos
+        .tab-pane.active id="photos_panel"
+          = render "shared/photos", photos: photos

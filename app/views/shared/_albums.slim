@@ -1,0 +1,15 @@
+.row-fluid
+  ul.thumbnails
+    - albums.each do |album|
+      li.span4
+        .thumbnail
+          img style="width: 300px; height: 200px;" src=album.thumb
+          .caption
+            h3= album.title
+            p= album.summary
+            p
+              | Published: #{album.published}
+            p
+              | Photos: #{album.photos_count}
+            p
+              a href=album_path(album.id) class="btn btn-primary" Photos
